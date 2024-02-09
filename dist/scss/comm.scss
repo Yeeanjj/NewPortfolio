@@ -1,0 +1,17 @@
+@charset "UTF-8";
+@import "reset";
+
+#header {
+  text-align: center;
+}
+
+.section {
+  height: 100vh;
+  text-align: center;
+}
+
+.fp-watermark {
+  display: none;
+}
+
+@import "style";

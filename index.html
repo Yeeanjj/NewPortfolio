@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>웹 포트폴리오 : 서연주</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./dist/css/fullpage.min.css" />
+    <link rel="stylesheet" href="./dist/css/comm.css" />
+    <script src="./dist/js/fullpage.min.js"></script>
+    <script src="./dist/js/comm.js"></script>
+  </head>
+  <body>
+    <header id="header">Header</header>
+    <main id="fullpage">
+      <div class="fullpage">
+        <div class="section intro">
+          <div class="introbox">
+            <div class="introtext">yeon's portfolio</div>
+          </div>
+        </div>
+        <div class="section profile">profile</div>
+        <div class="section portfolio">portfolio</div>
+        <div class="section contact">contact</div>
+      </div>
+      <!-- <footer class="section footer"></footer> -->
+    </main>
+    <script>
+      new fullpage("#fullpage", {
+        //options here
+        autoScrolling: true,
+        scrollHorizontally: true,
+        navigation: true,
+        navigationPosition: "right",
+      });
+    </script>
+  </body>
+</html>
