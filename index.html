@@ -10,21 +10,85 @@
       href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="./dist/css/fullpage.min.css" />
     <link rel="stylesheet" href="./dist/css/comm.css" />
     <script src="./dist/js/fullpage.min.js"></script>
     <script src="./dist/js/comm.js"></script>
   </head>
   <body>
-    <header id="header">Header</header>
+    <header id="header">
+      <h1 class="blind">menu</h1>
+      <ul class="nav">
+        <li class="nav_lst">
+          <a href="#">About</a>
+        </li>
+        <li class="nav_lst">
+          <a href="#">Portfolio</a>
+        </li>
+        <li class="nav_lst">
+          <a href="#">Contact</a>
+        </li>
+      </ul>
+    </header>
     <main id="fullpage">
       <div class="fullpage">
         <div class="section intro">
+          <h2 class="intro_animation">
+            Y&nbsp;&nbsp;E&nbsp;&nbsp;X&nbsp;&nbsp;N&nbsp;'&nbsp;s
+          </h2>
           <div class="introbox">
-            <div class="introtext">yeon's portfolio</div>
+            <div class="bar"></div>
+            <p class="introtxt">
+              Web <span class="sub_point">Publisher</span>
+              <br />
+              Portfolio
+            </p>
           </div>
         </div>
-        <div class="section profile">profile</div>
+        <div class="section profile">
+          <h2 class="profile_tit">About</h2>
+          <div class="profilebox">
+            <div class="imgbox">
+              <img src="./images/profile_img.jpg" alt="프로필 사진" />
+              <p class="img_desc">
+                안녕하세요! 신입 웹퍼블리셔 서연주입니다!<br />
+              </p>
+            </div>
+            <div class="descbox">
+              <div class="desc_tit">
+                Profile
+                <p class="desc_name">서연주 / 1999.05.27</p>
+              </div>
+              <ul class="desc_tit">
+                Education
+                <li class="desc_list">
+                  <span class="list_day">2024.01</span>
+                  웹디자인 기능사 필기 합격.
+                </li>
+                <li class="desc_list">
+                  <span class="list_day">2023.11</span>
+                  스마트 웹콘텐츠 UI/UX 디자인 & 프론트엔드 과정 수료.
+                </li>
+                <li class="desc_list">
+                  <span class="list_day">2023.06</span>
+                  UI/UX 모바일 웹 디자인(Figma) 과정 수료.
+                </li>
+                <li class="desc_list">
+                  <span class="list_day">2022.02</span>
+                  한림성심대학교 관광외식경영학과 졸업
+                </li>
+              </ul>
+              <ul class="desc_tit">
+                Skill
+                <li class="desc_list"></li>
+              </ul>
+            </div>
+          </div>
+        </div>
         <div class="section portfolio">portfolio</div>
         <div class="section contact">contact</div>
       </div>
@@ -35,8 +99,7 @@
         //options here
         autoScrolling: true,
         scrollHorizontally: true,
-        navigation: true,
-        navigationPosition: "right",
+        navigation: false,
       });
     </script>
   </body>
