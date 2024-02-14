@@ -463,12 +463,82 @@ img {
   width: 35px;
 }
 
+.portfolio .profile_tit {
+  position: relative;
+}
+.portfolio .profile_tit::after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  display: block;
+  content: "";
+  width: 13.5%;
+  height: 33%;
+  background: rgb(80, 210, 249);
+}
+
 .portzip {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  margin-top: 45px;
 }
 .portzip .portlist {
-  display: block;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   width: 33%;
+}
+.portzip .portlist:hover .portlist_desc::after {
+  width: 100%;
+  background: rgb(80, 210, 249);
+}
+.portzip .portlist .portlist_box {
+  height: 125px;
+  display: flex;
+  align-items: center;
+}
+.portzip .portlist .festar {
+  width: 250px;
+}
+.portzip .portlist .sound {
+  width: 150px;
+}
+.portzip .portlist .lazuli {
+  width: 70px;
+}
+.portzip .portlist .portlist_desc {
+  position: relative;
+  display: block;
+  font-size: 1.125rem;
+  font-weight: 500;
+  height: 50px;
+}
+.portzip .portlist .portlist_desc::after {
+  position: absolute;
+  bottom: 45%;
+  left: 0;
+  z-index: -1;
+  display: block;
+  content: "";
+  width: 0;
+  height: 25%;
+  transition: width 0.5s;
+}
+.portzip .portlist .port_link {
+  display: flex;
+  align-items: center;
+  margin-top: 5%;
+}
+.portzip .portlist .port_link .link_list {
+  display: block;
+  margin-right: 10px;
+}
+.portzip .portlist .port_link .link_list .link_a {
+  display: block;
+  width: 100px;
+  padding: 5% 0;
+  text-align: center;
+  font-size: 1.125rem;
 }/*# sourceMappingURL=comm.css.map */

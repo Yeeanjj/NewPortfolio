@@ -166,12 +166,87 @@
 }
 
 // portfolio
+.portfolio {
+  .profile_tit {
+    position: relative;
+    &::after {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      z-index: -1;
+      display: block;
+      content: "";
+      width: 13.5%;
+      height: 33%;
+      background: rgb(80, 210, 249);
+    }
+  }
+}
 .portzip {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  margin-top: 45px;
   .portlist {
-    display: block;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     width: 33%;
+    &:hover {
+      .portlist_desc {
+        &::after {
+          width: 100%;
+          background: rgb(80, 210, 249);
+        }
+      }
+    }
+    .portlist_box {
+      height: 125px;
+      display: flex;
+      align-items: center;
+    }
+    .festar {
+      width: 250px;
+    }
+    .sound {
+      width: 150px;
+    }
+    .lazuli {
+      width: 70px;
+    }
+    .portlist_desc {
+      position: relative;
+      display: block;
+      font-size: 1.125rem;
+      font-weight: 500;
+      height: 50px;
+      &::after {
+        position: absolute;
+        bottom: 45%;
+        left: 0;
+        z-index: -1;
+        display: block;
+        content: "";
+        width: 0;
+        height: 25%;
+        transition: width 0.5s;
+      }
+    }
+    .port_link {
+      display: flex;
+      align-items: center;
+      margin-top: 5%;
+      .link_list {
+        display: block;
+        margin-right: 10px;
+        .link_a {
+          display: block;
+          width: 100px;
+          padding: 5% 0;
+          text-align: center;
+          font-size: 1.125rem;
+        }
+      }
+    }
   }
 }
