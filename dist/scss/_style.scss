@@ -188,15 +188,40 @@
   justify-content: space-between;
   margin-top: 45px;
   .portlist {
+    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 33%;
+    margin: 5px 5px;
+    padding: 5px 0;
+    &::after {
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: -2;
+      content: "";
+      width: 0;
+      height: 0;
+      transition: width 1s, height 1s;
+    }
     &:hover {
+      width: 33%;
+      height: 100%;
+      background: rgba(144, 142, 142, 0.01);
+      box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
       .portlist_desc {
         &::after {
           width: 100%;
-          background: rgb(80, 210, 249);
+          background: rgba(80, 210, 249, 0.7);
+        }
+      }
+      &:last-child {
+        .portlist_desc {
+          &::after {
+            width: 88%;
+            left: 6%;
+          }
         }
       }
     }
@@ -232,19 +257,49 @@
         transition: width 0.5s;
       }
     }
-    .port_link {
-      display: flex;
-      align-items: center;
-      margin-top: 5%;
-      .link_list {
+  }
+  .port_link {
+    display: flex;
+    align-items: center;
+    margin-top: 5%;
+    .link_list {
+      display: block;
+      margin-right: 10px;
+      .link_a {
+        position: relative;
         display: block;
-        margin-right: 10px;
+        width: 100px;
+        padding: 5% 0;
+        text-align: center;
+        font-size: 1.125rem;
+        &:hover {
+          font-weight: 700;
+          &::after {
+            position: absolute;
+            bottom: 20%;
+            left: 10%;
+            z-index: -1;
+            content: "";
+            width: 80%;
+            height: 25%;
+            background: rgb(80, 210, 249);
+          }
+        }
+      }
+      &:nth-child(2) {
         .link_a {
-          display: block;
-          width: 100px;
-          padding: 5% 0;
-          text-align: center;
-          font-size: 1.125rem;
+          &:hover {
+            &::after {
+              position: absolute;
+              bottom: 20%;
+              left: 33%;
+              z-index: -1;
+              content: "";
+              width: 35%;
+              height: 25%;
+              background: rgb(80, 210, 249);
+            }
+          }
         }
       }
     }
