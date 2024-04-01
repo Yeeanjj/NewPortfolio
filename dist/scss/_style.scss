@@ -307,3 +307,34 @@
 }
 
 // contact
+
+.infobox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+
+  .icon {
+    i {
+      font-size: 28px;
+    }
+  }
+  .con_desc {
+    font-size: 18px;
+  }
+  .git {
+    img {
+      width: 50px;
+      margin: 0 auto;
+    }
+  }
+}
+.footdesc {
+  margin-top: 15px;
+  .f_d {
+    font-size: 14px;
+    &:first-child {
+      margin-bottom: 5px;
+    }
+  }
+}

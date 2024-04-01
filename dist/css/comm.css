@@ -305,8 +305,7 @@ img {
 }
 
 .contact {
-  height: 30vh;
-  background: #888;
+  height: 20vh;
 }
 
 .fp-watermark {
@@ -593,4 +592,31 @@ img {
   width: 35%;
   height: 25%;
   background: rgb(80, 210, 249);
+}
+
+.infobox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+}
+.infobox .icon i {
+  font-size: 28px;
+}
+.infobox .con_desc {
+  font-size: 18px;
+}
+.infobox .git img {
+  width: 50px;
+  margin: 0 auto;
+}
+
+.footdesc {
+  margin-top: 15px;
+}
+.footdesc .f_d {
+  font-size: 14px;
+}
+.footdesc .f_d:first-child {
+  margin-bottom: 5px;
 }/*# sourceMappingURL=comm.css.map */
